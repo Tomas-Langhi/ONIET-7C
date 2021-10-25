@@ -6,6 +6,7 @@ const Register = () => {
             <main className="form-signin">
                 <div className="d-flex justify-content-center w-100">
                     <form>
+                        <h1 className ="h3 mb-3 fw-normal">Please Register</h1>
 
                         <div className ="form-floating">
                             <input type ="username" className ="form-control" id="floatingInput" placeholder="Username"></input>
