@@ -42,7 +42,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_extensions',
     'oniet',
-]
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'django.contrib.sites',
+    'allauth', 
+    'allauth.account', 
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,3 +146,16 @@ CORS_ORIGIN_WHITELIST = [
 STATICFILES_DIRS = [
             os.path.join(BASE_DIR, 'frontend/build/static'),
         ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication' 
+    ],
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+SITE_ID = 1
