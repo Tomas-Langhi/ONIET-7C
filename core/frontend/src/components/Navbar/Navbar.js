@@ -2,6 +2,8 @@ import React from 'react'
 
 import { NavbarStyle, NavButton } from './styles/Navbar'
 
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
     return (
         <>
@@ -14,18 +16,22 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav me-auto mb-0 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Inicio</a>
+                                <Link to='/' style={{ textDecoration: 'none' }}>
+                                    <span className="nav-link active" aria-current="page">Inicio</span>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Barrios</a>
-                            </li>
-                            <li className="nav-item">
+                                <Link to='/barrios' style={{ textDecoration: 'none' }}>
+                                    <span className="nav-link">Barrios</span>
+                                </Link>
                             </li>
                         </ul>
                         <span class="navbar-text">
-                            <NavButton>
-                            Iniciar Sesion
-                            </NavButton>
+                            <Link to='/login'>
+                                <NavButton>
+                                    Iniciar Sesion
+                                </NavButton>
+                            </Link>
                         </span>
                     </div>
                 </div>

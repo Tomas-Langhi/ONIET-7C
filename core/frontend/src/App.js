@@ -11,6 +11,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import Navbar from './components/Navbar/Navbar';
 import Table from './components/Table/Table';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route path='/barrios' component={Table} />
           <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
         </Switch>
         </section>
       </div>
