@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -32,6 +32,7 @@ const Login = () => {
                         </div>
 
                         <button className ="w-100 btn btn-lg btn-primary" type="button" onClick={handleSubmit}>Sign in</button>
+                        <Link to = "/register">Register</Link>
                     </form>
                 </div>
             </main>
